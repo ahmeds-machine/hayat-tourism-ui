@@ -1,0 +1,122 @@
+/* Hayat Tourism design tokens
+   Source of truth: CLAUDE.md. Phase 2 swaps brand colors/logo here only. */
+
+:root {
+  /* Color: brand primitives */
+  --color-ink: #10182B;
+  --color-accent: #F2960F;
+  --color-bg-light: #F2F1EE;
+  --color-white: #FFFFFF;
+
+  /* Color: derived */
+  --color-ink-60: rgb(16 24 43 / .66);
+  --color-ink-10: rgb(16 24 43 / .08);
+  --color-accent-hover: #D9820A;
+  --color-surface-muted: #E7E6E2;   /* footer panel */
+  --color-field: #F4F4F2;
+  --color-field-border: #DCDBD5;
+  --color-line: rgb(16 24 43 / .14);  /* hairline dividers */
+  --color-error: #B3261E;
+  --nav-solid-bg: var(--color-white);
+  --whatsapp: #25D366;
+
+  /* Color: semantic */
+  --bg-page: var(--color-bg-light);
+  --bg-dark: var(--color-ink);
+  --bg-card: var(--color-white);
+  --text-primary: var(--color-ink);
+  --text-muted: var(--color-ink-60);
+  --text-on-dark: var(--color-white);
+  --cta-bg: var(--color-accent);
+  --cta-text: var(--color-ink);       /* ink on orange passes AA; white on orange does not */
+
+  /* Quick-link card accents (icon/text at rest, fill on hover) */
+  --icon-wine: #6B1F1F;
+  --icon-green: #1B5E3B;
+  --icon-indigo: #2C2F6B;
+  --icon-brown: #5C3A1E;
+  --icon-amber: #E6A817;
+
+  /* Typography */
+  --font-display: "Fredoka", "Baloo 2", ui-rounded, system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale: fluid, measured from the 1920px reference */
+  --fs-wordmark: clamp(6rem, 33vw, 37rem);
+  --fs-hashtag: clamp(1.75rem, 7.6vw, 8.25rem);
+  --fs-statement: clamp(2rem, 4.1vw, 4.5rem);
+  --fs-h2: clamp(2rem, 3vw, 3.25rem);
+  --fs-h3: clamp(1.25rem, 1.5vw, 1.75rem);
+  --fs-quicklink: clamp(1.375rem, 1.8vw, 2.125rem);
+  --fs-lead: clamp(1.0625rem, 1.2vw, 1.375rem);
+  --fs-body: 1.0625rem;
+  --fs-small: .875rem;
+
+  --fw-medium: 500;
+  --fw-display: 600;
+  --fw-display-heavy: 700;
+
+  --lh-tight: 1.12;
+  --lh-snug: 1.3;
+  --lh-body: 1.55;
+
+  /* Spacing (8px base) */
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Layout */
+  --container-max: 100rem;                 /* 1600px inner = reference's 160px gutters at 1920 */
+  --gutter: clamp(1rem, 8.33vw, 10rem);
+  --nav-h: clamp(4.5rem, 5.2vw, 6.25rem);
+  --section-pad: clamp(4rem, 7vw, 8rem);
+
+  /* Shape rule: pill = nav CTA, tabs, chips. 16px = cards & photos. 24px = floating panels.
+     sweep = hero bottom / footer top edges. 6px = fields & buttons inside forms. */
+  --radius-field: 6px;
+  --radius-card: 16px;
+  --radius-panel: 24px;
+  --radius-sweep: clamp(40px, 11vw, 220px);
+  --radius-pill: 999px;
+
+  /* Elevation: tinted to ink */
+  --shadow-soft: 0 1px 2px rgb(16 24 43 / .04), 0 8px 24px rgb(16 24 43 / .06);
+  --shadow-float: 0 2px 6px rgb(16 24 43 / .06), 0 24px 60px rgb(16 24 43 / .18);
+
+  /* Motion */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 520ms;
+
+  /* Layers */
+  --z-fab: 90;
+  --z-nav: 100;
+  --z-menu: 110;
+}
+
+/* Dark theme: main.js sets data-theme="dark" on <html>. Navy sections (--bg-dark) and the accent stay;
+   light surfaces step down to deep blue-greys and text moves to a warm off-white. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg-light: #1a1f2e;
+  --bg-card: #1e2535;
+  --nav-solid-bg: #0d1220;
+  --color-surface-muted: #141a28;
+  --color-field: #252d40;
+  --color-field-border: #353e55;
+  --color-ink-10: rgb(255 255 255 / .08);
+  --color-line: rgb(255 255 255 / .1);
+  --color-error: #F2B8B5;
+  --text-primary: #ECE8E0;
+  --text-muted: rgb(236 232 224 / .66);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / .2), 0 8px 24px rgb(0 0 0 / .25);
+  --shadow-float: 0 2px 6px rgb(0 0 0 / .25), 0 24px 60px rgb(0 0 0 / .45);
+}

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-07T14:12:50.717Z",
+        "reason": "user requested: WhatsApp nav button spec asked for 'slight scale up (1.05) + green glow' on hover"
+      }
+    ]
+  }
+}
